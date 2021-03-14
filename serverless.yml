@@ -1,0 +1,27 @@
+org: paulcothenet
+app: patch
+service: subscription
+
+provider:
+  name: aws
+  profile: perso
+  region: us-west-2
+  runtime: nodejs12.x
+
+custom:
+  patch_key:
+    dev: ${ssm:/perso/patch/dev/key~true}
+    prod: ${ssm:/perso/patch/prod/key~true}
+
+plugins:
+  - serverless-plugin-typescript
+
+functions:
+  monthly:
+    handler: src/sync.handler
+    environment:
+      PATCH_API_KEY: ${self:custom.patch_key.${opt:stage, self:provider.stage}}
+    memorySize: 256
+    timeout: 60
+    events:
+      - schedule: rate(2 weeks)
