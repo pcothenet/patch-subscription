@@ -1,6 +1,6 @@
 org: paulcothenet
 app: patch
-service: subscription
+service: patch-subscription
 
 provider:
   name: aws
@@ -18,10 +18,12 @@ plugins:
 
 functions:
   monthly:
-    handler: src/sync.handler
+    handler: src/index.handler
     environment:
+      BIWEEKLY_AMOUNT_USD: 25
       PATCH_API_KEY: ${self:custom.patch_key.${opt:stage, self:provider.stage}}
     memorySize: 256
     timeout: 60
     events:
-      - schedule: rate(2 weeks)
+      - schedule: cron(0 0 1,15 * ? *)
+      # - schedule: cron(0 0 15 * ? *)

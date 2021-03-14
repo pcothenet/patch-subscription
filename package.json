@@ -43,6 +43,7 @@
     "all": true
   },
   "dependencies": {
+    "@patch-technology/patch": "1.5.0",
     "axios": "0.21.1",
     "dotenv": "8.2.0",
     "lodash": "4.17.21"
