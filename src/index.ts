@@ -1,7 +1,5 @@
 const { default: Patch } = require('@patch-technology/patch');
 
-console.log(process.env);
-
 const { PATCH_API_KEY } = process.env;
 const DEFAULT_PROJECT_ID = PATCH_API_KEY.includes('key_test')
   ? 'pro_test_0de1a59eed9ff8474e09077ddb3714b2'
