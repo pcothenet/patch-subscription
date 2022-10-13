@@ -5,8 +5,8 @@
   "version": "0.2.0",
   "private": true,
   "engines": {
-    "node": "14.4.0",
-    "npm": "7.6.3"
+    "node": "16.13.1",
+    "npm": "8.12.1"
   },
   "scripts": {
     "dev": "nodemon",
@@ -43,9 +43,9 @@
     "all": true
   },
   "dependencies": {
-    "@patch-technology/patch": "1.5.0",
-    "axios": "0.21.1",
-    "dotenv": "8.2.0",
+    "@patch-technology/patch": "2.0.0",
+    "axios": "1.1.2",
+    "dotenv": "16.0.3",
     "lodash": "4.17.21"
   },
   "devDependencies": {
