@@ -9,7 +9,7 @@ const DEFAULT_PROJECT_ID =
     ? 'pro_test_0de1a59eed9ff8474e09077ddb3714b2'
     : 'pro_prod_a0bd405145cf44b744edcaba0a6ae399'; // Charm Industrial
 const PROJECT_ID = process.env.PROJECT_ID || DEFAULT_PROJECT_ID;
-const VINTAGE_YEAR = 2026;
+const VINTAGE_YEAR = 2028;
 const BIWEEKLY_AMOUNT_USD = Number(process.env.BIWEEKLY_AMOUNT_USD);
 
 const patch = Patch(PATCH_API_KEY);

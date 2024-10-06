@@ -5,8 +5,8 @@
   "version": "0.2.0",
   "private": true,
   "engines": {
-    "node": "16.13.1",
-    "npm": "8.12.1"
+    "node": "22.9.0",
+    "npm": "10.8.3"
   },
   "scripts": {
     "dev": "nodemon",
@@ -59,7 +59,6 @@
     "eslint-plugin-prettier": "3.3.1",
     "nyc": "15.1.0",
     "prettier": "2.2.1",
-    "serverless-plugin-typescript": "1.1.9",
     "shx": "0.3.3",
     "source-map-loader": "2.0.1",
     "source-map-support": "0.5.19",

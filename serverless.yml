@@ -6,15 +6,12 @@ provider:
   name: aws
   profile: perso
   region: us-west-2
-  runtime: nodejs16.x
+  runtime: nodejs20.x
 
 custom:
   patch_key:
     dev: ${ssm:/perso/patch/dev/key}
     prod: ${ssm:/perso/patch/prod/key}
-
-plugins:
-  - serverless-plugin-typescript
 
 functions:
   monthly:
